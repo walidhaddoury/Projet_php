@@ -1,0 +1,92 @@
+/* CARD */
+#card {
+    display: flex;
+    justify-content: center;
+}
+
+.card-connect {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-family: 'Goldman';
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* INPUT */
+
+input {
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    border: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+#input-connect {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* BOUTONS */
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#buttons input {
+    width: 156px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    color: black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Goldman';
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
