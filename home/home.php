@@ -1,0 +1,1 @@
+<h3 class="text_homePage">Bienvenue sur notre site, by Chris, Léonard et Walid</h3>

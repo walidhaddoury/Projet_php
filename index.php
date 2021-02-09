@@ -1,9 +1,16 @@
 <?php
-require_once "header/header.php";
-?>
 
-<h1>Home page</h1>
+$page = 'home';
+$pages = array('home', 'logIn', 'signIn');
 
-<?php
-require_once "footer.php";
+if (isset($_GET['p'])) {
+    if (in_array($_GET['p'], $pages)) {
+        $page = $_GET['p'];
+    }
+}
+
+
+require_once realpath("header/header.php");
+require_once realpath($page ."/" . $page . ".php");
+require_once realpath("footer.php");
 ?>

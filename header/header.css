@@ -1,12 +1,25 @@
-*, ::before, ::after {
+/**, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow-y: hidden; 
+}
 
 .header_nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     background-color: black;
     height: 75px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -19,6 +32,7 @@ ul {
 
 a {
     text-decoration: none;
+    outline: none;
 }
 
 h1 {
@@ -32,8 +46,8 @@ h1 {
     justify-content: space-evenly;
 }
 
-#menu-links a {
-    width: 25%;
+.link {
+    width: 20%;
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -44,6 +58,7 @@ h1 {
     text-align: center;
 }
 
+/*
 .isActive {
     background-color: white;
     border-left: 7px solid red;
@@ -52,9 +67,9 @@ h1 {
     border-top: 7px solid white;
     color: black !important;
 }
+*/
 
-
-#menu-links a:hover {
+.link:hover {
     background-color: white;
     color: black;
     border-left: 7px solid red;
@@ -69,6 +84,15 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.fa-shopping-cart {
+    color: white;
+    align-items: center;
+}
+
+.fa-shopping-cart {
+    color: white;
 }
 
 @media only screen and (max-width: 960px) {

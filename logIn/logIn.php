@@ -1,12 +1,12 @@
 <div id="card">
     <div class="card-connect">
-        <h1>CONNEXION</h1>
-        <form action="index.php" method="get">
-            <input name="username" class="input-connect login" placeholder="Votre email">
+        <h1 class="connect">CONNEXION</h1>
+        <form class="form_logIn" action="" method="post">
+            <input name="username" class="input-connect login" placeholder="Username">
             <input name="password" class="input-connect password" type="password" placeholder="Mot de passe">
             <div id="buttons">
-                <a class="button" href="signIn.php">Inscription</a>
-                <input class="button submitButton" type="submit" value="Connexion">
+                <button class="button"><a href="?p=signIn">Inscription</a></button>
+                <button class="button" type="submit">Connexion</button>
             </div>
         </form>
     </div>
