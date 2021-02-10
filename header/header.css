@@ -12,6 +12,9 @@ body {
     height: 100vh;
 }
 
+/*-------------------------------------------------------------*/
+
+/* CSS POUR LE HEADER */
 .header_nav {
     position: fixed;
     top: 0px;
@@ -24,21 +27,21 @@ body {
     justify-content: space-evenly;
 }
 
-ul {
+.header_nav ul {
     list-style: none;
     height: 100%;
 }
 
-a {
+.header_nav a {
     text-decoration: none;
     outline: none;
 }
 
-h1 {
+.header_nav h1 {
     color: white;
 }
 
-#menu-links {
+.menu-links {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -56,17 +59,6 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-
-/*
-.isActive {
-    background-color: white;
-    border-left: 7px solid red;
-    border-right: 7px solid red;
-    border-bottom: 7px solid white;
-    border-top: 7px solid white;
-    color: black !important;
-}
-*/
 
 .link:hover {
     background-color: white;
@@ -103,6 +95,9 @@ li {
     }
 }
 
+/*-------------------------------------------------------------*/
+
+/* CSS POUR LES INFOS USER */
 .table_user {
     width: 100%;
     font-size: larger
@@ -130,12 +125,40 @@ thead th {
     align-items: center;
 }
 
-.admin {
-    height: 100px;
-    width:300px;
-    font-size: larger;
-    cursor: pointer;
+.div_user {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.button_user {
+    font-size: large;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    color: black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    text-decoration: none;
+    font-family: 'Goldman';
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.button_user:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
+
+
+/*-------------------------------------------------------------*/
+
+/* CSS POUR LES INFOS ADMIN */
 
 .admin_body {
     display: flex;
@@ -149,6 +172,187 @@ thead th {
     border-bottom: 3px solid black;
 }
 
-.button_admin button {
+.button_admin {
     font-size: x-large;
+    cursor: pointer;
+    height: 100px;
+    width: 400px;
+    color: black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    text-decoration: none;
+    font-family: 'Goldman';
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.button_admin:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
+
+.button_logout {
+    margin-top: 50px;
+}
+
+
+/*-------------------------------------------------------------*/
+
+
+/* CSS POUR LA PAGE DE CONNEXION */
+/* CARD */
+#card {
+    display: flex;
+    justify-content: center;
+}
+
+.card-connect {
+    border: solid 5px black;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    text-align: center;
+    padding: 30px;
+}
+
+.connect {
+    font-family: 'Goldman';
+    color: black;
+}
+
+.form_logIn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* INPUT */
+
+.input-connect {
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    border: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+#input-connect {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-connect:focus {
+    outline: none;
+}
+
+/* BOUTONS */
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button.button {
+    text-align: center;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    color: black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    font-size: large;
+    text-decoration: none;
+    font-family: 'Goldman';
+    text-align: center;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
+
+button {
+    color: black;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button a:active {
+    text-decoration: none;
+}
+
+/* signIn */
+.form_signIn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_signIn .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space;
+}
+
+.place {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    width: 400px;
+    height: 50px;
+    font-size: large;
+    border: none;
+    /* border-bottom: 3px solid black;*/
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    text-align: center;
+    background-color: #FAF7F6;
+}
+
+.input:focus {
+    outline: none;
+}
+
+#button_form {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* TEXT HOMEPAGE */
+
+.text_homePage {
+    font-family: 'Goldman';
+    color: black;
+    font-size: 30px;
+    text-align: center;
 }

@@ -13,7 +13,7 @@
             <input name="email" class="mail input" type="text" placeholder="E-mail">
         </div>
         <div id="button_form">
-            <button class="button"><a href="?p=logIn">Annuler</a></button>
+            <button type="button" class="button" OnClick="window.location.href='?p=logIn'">Annuler</button>
             <button class="button" type="submit">Valider</button>
         </div>
     </form>

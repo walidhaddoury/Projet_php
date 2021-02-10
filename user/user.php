@@ -24,8 +24,8 @@ $date = new DateTime(getUser()->created_at);
         </tbody>
     </table>
 
-    <div id="button_form">
-        <button class="button"><a href="?p=logOut">Deconnexion</a></button>
-        <button class="button"><a href="?p=handle_delete">Supprimer le compte</a></button>
+    <div class="div_user">
+        <button class="button_user" OnClick="window.location.href='?p=logOut'">Deconnexion</button>
+        <button class="button_user" OnClick="window.location.href='?p=handle_delete'">Supprimer le compte</button>
     </div>
 </div>
