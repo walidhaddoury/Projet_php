@@ -33,8 +33,8 @@ $id = $AccountManager->add([
     'password' => hash('sha256', $_POST['password']),
 ]);
 
-echo "C BON ça MARCHE !";
+
+echo "<h3 class='text_homePage'>Votre compte a bien été créé.</h3>";
 die();
-// header('Location: signIn.php?success=true&user_id=' . $id);
 
 ?>

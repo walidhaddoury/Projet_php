@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     height: 100vh;
-    overflow-y: hidden; 
 }
 
 .header_nav {
@@ -102,4 +101,54 @@ li {
     #profil-links {
         margin: 0;
     }
+}
+
+.table_user {
+    width: 100%;
+    font-size: larger
+}
+
+.table_user td {
+    height: 50px;
+    width: 33%;
+    border: 3px solid black;
+    text-align: center;
+    font-size: larger;
+}
+
+thead th {
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+#user_body {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.admin {
+    height: 100px;
+    width:300px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.admin_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_body h2 {
+    font-size: 35px;
+    border-bottom: 3px solid black;
+}
+
+.button_admin button {
+    font-size: x-large;
 }

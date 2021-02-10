@@ -3,7 +3,7 @@
 require_once("init.php");
 
 $page = 'home';
-$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product');
+$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete');
 
 if (isset($_GET['p'])) {
     if (in_array($_GET['p'], $pages)) {
@@ -23,10 +23,17 @@ switch ($page) {
         break;
     case 'logIn':
         if (isset($_SESSION['user'])){
-            require_once realpath("user/user.php");
+            if (getUser()->role === "1"){
+                require_once realpath("admin/admin.php");
+            }else {
+                require_once realpath("user/user.php");
+            }
         }else {
             require_once realpath($page ."/" . $page . ".php");
         }
+        break;
+    case 'handle_delete':
+        require_once realpath("account/" . $page . ".php");
         break;
     default:
         require_once realpath($page ."/" . $page . ".php");

@@ -30,7 +30,7 @@ if ($account->password != $password) {
 
 $_SESSION['user'] = json_encode($account);
 
-echo "Bienvenue ".getUser()->username;
+echo "<h3 class='text_homePage'>Bienvenue ".getUser()->username."</h3>";
 die();
 // header('Location: loggedin.php');
 

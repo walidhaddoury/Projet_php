@@ -7,6 +7,7 @@
     padding: 0 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .course__item {
     border: 1px solid rgba(0,0,0,0.25);
@@ -15,6 +16,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 10px 0;
+    min-width: 175px;
   }
   
   .course__item .course_img {
