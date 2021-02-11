@@ -3,7 +3,7 @@
 require_once("init.php");
 
 $page = 'home';
-$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete', 'categories', 'add_Product', 'handle_add_Product', 'add_categorie', 'add_User', 'update_categorie', 'handle_add_User', 'delete_categorie', 'handle_add_categorie', 'delete_Product', 'update_Product', 'delete_User', 'update_User', 'handle_delete_product', 'handle_update_product', 'handle_delete_categorie', 'handle_delete_User', 'handle_update_categorie');
+$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete', 'categories', 'add_Product', 'handle_add_Product', 'add_categorie', 'add_User', 'update_categorie', 'handle_add_User', 'delete_categorie', 'handle_add_categorie', 'delete_Product', 'update_Product', 'delete_User', 'update_User', 'handle_delete_product', 'handle_update_product', 'handle_delete_categorie', 'handle_delete_User', 'handle_update_categorie', 'handle_update_User');
 
 if (isset($_GET['p'])) {
     if (in_array($_GET['p'], $pages)) {
@@ -63,6 +63,9 @@ switch ($page) {
         require_once realpath("product/" . $page . ".php");
         break;
     case 'handle_add_User':
+        require_once realpath("admin/" . $page . ".php");
+        break;
+    case 'handle_update_User':
         require_once realpath("admin/" . $page . ".php");
         break;
     case 'handle_delete_User':

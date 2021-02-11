@@ -60,4 +60,14 @@ class AccountManager
         $query->bindValue(':id', $id); // on remplace :id par l'id de l'utilisateur
         $query->execute(); // la requete est executee
     }
+
+    public function updateUser($user)
+    {
+        $query = $this->_db->prepare('UPDATE users SET username = :username, email = :email, role = :role WHERE id = :id');
+        $query->bindValue(':id', $user['id']);
+        $query->bindValue(':username', $user['username']);
+        $query->bindValue(':email', $user['email']);
+        $query->bindValue(':role', $user['role']);
+        $query->execute(); // la requete est executee
+    }
 }

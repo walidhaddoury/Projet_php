@@ -3,7 +3,7 @@
 require_once("init.php");
 
 // check empty fields
-if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cPassword']) || empty($_POST['username']) || empty($_POST['identifiant'])) {
+if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cPassword']) || empty($_POST['username']) || empty($_POST['identifiant']) || empty($_POST['role'])) {
     header('Location: ?p=add_User');
     die();
 }

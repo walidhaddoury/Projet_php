@@ -18,23 +18,24 @@ require_once("init.php");
         </thead>
         <tbody>
 
-        <?php
+            <?php
             $query = $db->prepare('SELECT * FROM users');
             $query->execute();
             $datas = $query->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($datas as $element):
+            foreach ($datas as $element) :
                 $date = new DateTime($element['created_at']);
-        ?>
-            <tr>
-                <td><?= $element['id'] ?></td>
-                <td><?= $element['username'] ?></td>
-                <td><?= $element['email'] ?></td>
-                <td><?= $element['role'] == 0 ? 'User' : 'Admin' ?></td>
-                <td><?= $date->format('d F Y') ?></td>
-                <td><button OnClick="window.location.href='?p=delete_Product'"><i class="fas fa-check fa-2x update"></i></button></td>
-            </tr>
-        
-        <?php endforeach; ?>
+            ?>
+                <form action="?p=handle_update_User" method="POST">
+                    <tr class="product_update">
+                        <td><input name="id" type="text" value="<?= $element['id'] ?>" /></td>
+                        <td><input name="username" type="text" value="<?= $element['username'] ?>" /></td>
+                        <td><input name="email" type="text" value="<?= $element['email'] ?>" /></td>
+                        <td><input name="role" type="text" value="<?= $element['role'] == 0 ? 'User' : 'Admin' ?>" /></td>
+                        <td><input name="email" type="text" value="<?= $date->format('d F Y') ?>" /></td>
+                        <td><button type='submit'><i class="fas fa-check fa-2x update"></i></button></td>
+                    </tr>
+                </form>
+            <?php endforeach; ?>
 
         </tbody>
     </table>
