@@ -17,9 +17,9 @@
         <h1 class="title">Cours en Ligne</h1>
         <ul class="menu-links">
             <a class="link isActive" href="?p=home">Accueil</a>
-            <a class="link isActive" href="?p=product">Catégories</a>
+            <a class="link isActive" href="?p=categories">Catégories</a>
+            <a class="link isActive" href="?p=product">Produits</a>            
             <a class="link isActive" href="?p=logIn">Mon compte</a>
             <li><a href=""><i class="fas fa-shopping-cart fa-2x"></i></a></li>
         </ul>
     </nav>
-</body>    

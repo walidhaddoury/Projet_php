@@ -356,3 +356,33 @@ button {
     font-size: 30px;
     text-align: center;
 }
+
+
+/* CSS CATEGORIES */
+
+.button_categorie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15%;
+}
+
+.button_categorie .categorie {
+    margin-bottom: 50px;
+}
+
+/* CSS CATEGORIE PRODUCT FIND */
+
+.product_find {
+    height: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 25px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

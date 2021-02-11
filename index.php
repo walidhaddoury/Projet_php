@@ -3,7 +3,7 @@
 require_once("init.php");
 
 $page = 'home';
-$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete');
+$pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete', 'categories');
 
 if (isset($_GET['p'])) {
     if (in_array($_GET['p'], $pages)) {
