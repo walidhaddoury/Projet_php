@@ -105,10 +105,28 @@ li {
 
 .table_user td {
     height: 50px;
-    width: 33%;
+    width: 20%;
     border: 3px solid black;
     text-align: center;
     font-size: larger;
+}
+
+.table_user td input {
+    width: 98%;
+    height: 98%;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: large;
+    font: bold;
+    pointer-events:none;
+}
+
+.table_user td button{
+    width: 98%;
+    height: 98%;
+    border: none;
+    background-color: transparent;
 }
 
 thead th {
@@ -385,4 +403,49 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+
+/* CSS BUTTON DELETE */
+
+.delete:hover, .update:hover {
+    cursor: pointer;
+}
+
+
+/* ADMIN DELETE */
+.admin_delete td {
+    min-width: 10%;
+}
+
+.admin_delete td button{
+    width: 98%;
+    height: 98%;
+    border: none;
+    background-color: transparent;
+}
+
+/* PRODUCT DELETE */
+.product_delete td {
+    min-width: 10%;
+}
+
+.product_delete td button{
+    width: 98%;
+    height: 98%;
+    border: none;
+    background-color: transparent;
+}
+
+/* PRODUCT UPDATE */
+.product_update td input {
+    border: none;
+    width: 98%;
+    height: 98%;
+    font-size: large;
+    pointer-events: all;
+}
+
+.product_update td .prix {
+    text-align: center;
 }

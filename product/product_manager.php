@@ -1,46 +1,80 @@
-<?php 
+<?php
 
-class ProductManager {
+class ProductManager
+{
 
     private $_db;
 
-    function __construct($db) { // initialise la BDD
+    function __construct($db)
+    { // initialise la BDD
         $this->setDb($db);
     }
 
-    function setDb(PDO $db) { // Initialise dans la class
+    function setDb(PDO $db)
+    { // Initialise dans la class
         $this->_db = $db;
     }
 
-    public function getByCategorie($categorie) {
-        $query = $this->_db->prepare('SELECT * FROM categorie C, produit P, categori_product CP 
-                                      WHERE C.id = CP.idCategorie AND CP.idProduct = P.id');
-        $query->execute(); // la requete est executee
-        $data = $query->fetch();
-        if ($data === false) { return false; }
-        $account = new Account(); // Creer une nouvelle instance de la Class Account
-        $account->hydrate($data); // Injecte les infos dans la nouvelle instance
-        return $account;
-    }
-
-    public function add($user) {
-        $query = $this->_db->prepare('INSERT INTO users (username, email, password) VALUES (?, ?, ?)'); 
+    // ADD PRODUCT
+    public function add($product)
+    {
+        $query = $this->_db->prepare('INSERT INTO product (intitule, prix, description) VALUES (?, ?, ?)');
         $query->execute([
-            $user['username'],
-            $user['email'],
-            $user['password']
+            $product['intitule'],
+            $product['prix'],
+            $product['description']
         ]); // la requete est executee
-        
+
         $id = $this->_db->lastInsertId();
         return $id;
     }
 
-    // Suppression d'un utilisateur
-    public function delete($id) {
-        $query = $this->_db->prepare('DELETE FROM users WHERE id = :id');
+
+    // GET Categorie by name
+    public function getIdCategorie($name)
+    {
+        $query = $this->_db->prepare('SELECT id FROM categorie WHERE intitule = :intitule');
+        $query->bindValue(':intitule', $name);
+        $query->execute();
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        if ($data === false) {
+            return false;
+        }
+        return $data['id'];
+    }
+
+    // ADD PRODUCT IN CATEGORIE
+    public function addProductToCategorie($datas)
+    {
+        $query = $this->_db->prepare('INSERT INTO categorie_product (idCategorie, idProduct) VALUES (?, ?)');
+        $query->execute([
+            $datas['idCategorie'],
+            $datas['idProduct']
+        ]);
+    }
+
+    // Suppression d'un produit
+    public function delete($id)
+    {
+        $query = $this->_db->prepare('DELETE FROM product WHERE id = :id');
         $query->bindValue(':id', $id); // on remplace :id par l'id de l'utilisateur
         $query->execute(); // la requete est executee
-    }    
-}
+    }
 
-?>
+    public function deleteCategorieProduct($id)
+    {
+        $query = $this->_db->prepare('DELETE FROM categorie_product WHERE idProduct = :idProduct');
+        $query->bindValue(':idProduct', $id); // on remplace :id par l'id de l'utilisateur
+        $query->execute(); // la requete est executee
+    }
+
+    public function updateProduct($product)
+    {
+        $query = $this->_db->prepare('UPDATE product SET intitule = :intitule, prix = :prix, description = :description WHERE id = :id');
+        $query->bindValue(':id', $product['id']);
+        $query->bindValue(':intitule', $product['intitule']);
+        $query->bindValue(':prix', $product['prix']);
+        $query->bindValue(':description', $product['description']);
+        $query->execute(); // la requete est executee
+    }
+}

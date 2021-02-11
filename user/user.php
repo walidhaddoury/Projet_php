@@ -12,6 +12,7 @@ $date = new DateTime(getUser()->created_at);
             <tr>
                 <th>Nom d'utilisateur</th>
                 <th>Adresse email</th>
+                <th>Role</th>
                 <th>Date création</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@ $date = new DateTime(getUser()->created_at);
             <tr>
                 <td><?= getUser()->username ?></td>
                 <td><?= getUser()->email ?></td>
+                <td><?= getUser()->role == 0 ? 'User' : 'Admin' ?></td>
                 <td><?= $date->format('d F Y') ?></td>
             </tr>
         </tbody>
