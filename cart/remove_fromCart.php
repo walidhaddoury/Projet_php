@@ -1,13 +1,20 @@
 <?php
-echo '<pre>';
-print_r($_SESSION['cart']);
-echo '</pre>';
-die;
 
-unset($_SESSION['cart'][array_search($_POST['id'], $_SESSION['cart'])]);
-// $product = $CartManager->addToCart($_POST['id']);
-//unset($_SESSION['cart'][$_POST['id']]);
+$array = array();
 
-header('Location: ?p=cart')
+foreach($_SESSION['cart'] as $element) {
+    if (json_decode($element)->id !== $_POST['id']) {
+        array_push($array, $element);
+    }
+}
 
-?>
+// print_r(count($_SESSION['cart']));
+// die;
+
+$_SESSION['cart'] = $array;
+
+if (count($_SESSION['cart']) === 0) {
+    unset($_SESSION['cart']);
+}
+
+header('Location: ?p=cart');

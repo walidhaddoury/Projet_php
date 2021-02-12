@@ -26,7 +26,7 @@ require_once("init.php");
                 ?>
                     <form action="?p=remove_fromCart" method="POST">
                         <tr>
-                            <td name="intitule" value=><?= json_decode($element)->intitule ?></td>
+                            <td name="intitule"><?= json_decode($element)->intitule ?></td>
                             <td name="prix"><?= json_decode($element)->prix ?> €</td>
                             <td name="description"><?= json_decode($element)->description ?></td>
                             <td><button type="submit" name="id" value="<?= json_decode($element)->id ?>"><i class="far fa-trash-alt fa-2x delete"></i></button></td>
