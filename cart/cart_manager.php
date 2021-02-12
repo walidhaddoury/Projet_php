@@ -29,6 +29,8 @@ class CartManager
     }
 
     public function removeFromCart($id){
-
+        $product = new Cart(); // Creer une nouvelle instance de la Class Account
+        $product->hydrateCart($data); // Injecte les infos dans la nouvelle instance
+        return $product;
     }
 }

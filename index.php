@@ -6,7 +6,7 @@ $page = 'home';
 $pages = array('home', 'logIn', 'signIn', 'handle_signIn', 'handle_logIn', 'product', 'logOut', 'handle_delete', 'categories', 'add_Product', 
                'handle_add_Product', 'add_categorie', 'add_User', 'update_categorie', 'handle_add_User', 'delete_categorie', 'handle_add_categorie', 
                'delete_Product', 'update_Product', 'delete_User', 'update_User', 'handle_delete_product', 'handle_update_product', 'handle_delete_categorie', 
-               'handle_delete_User', 'handle_update_categorie', 'handle_update_User', 'cart', 'add_cart', 'clear_cart');
+               'handle_delete_User', 'handle_update_categorie', 'handle_update_User', 'cart', 'add_cart', 'clear_cart', 'remove_fromCart');
 
 if (isset($_GET['p'])) {
     if (in_array($_GET['p'], $pages)) {
@@ -101,6 +101,9 @@ switch ($page) {
     case 'clear_cart':
         require_once realpath("cart/" . $page . ".php");
         break;
+        case 'remove_fromCart':
+            require_once realpath("cart/" . $page . ".php");
+            break;
     default:
         require_once realpath($page . "/" . $page . ".php");
         break;
