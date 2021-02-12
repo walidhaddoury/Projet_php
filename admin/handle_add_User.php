@@ -3,7 +3,7 @@
 require_once("init.php");
 
 // check empty fields
-if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cPassword']) || empty($_POST['username']) || empty($_POST['identifiant']) || empty($_POST['role'])) {
+if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['cPassword']) || empty($_POST['username']) || empty($_POST['role'])) {
     header('Location: ?p=add_User');
     die();
 }
@@ -31,11 +31,16 @@ $AccountManager->add([
     'username' => $_POST['username'],
     'email' => $_POST['email'],
     'password' => hash('sha256', $_POST['password']),
-    'role' => intval($_POST['role'])
+    'role' => ($_POST['role'] == "admin" ? 1 : 0)
 ]);
 
 
-echo "<h3 class='text_homePage'>Votre compte a bien été créé.</h3>";
+echo "  <div class='retour admin_body'>
+            <h3 class='text_homePage'>L'utilisateur a bien été ajouté.</h3>
+            <div class='button_div'>
+                <button class='button_admin button_logout' OnClick=\"window.location.href='?p=logIn'\">Retour</button>
+            </div>
+        </div>";
 die();
 
 ?>

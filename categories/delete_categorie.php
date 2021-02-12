@@ -33,4 +33,8 @@ require_once("init.php");
 
         </tbody>
     </table>
+    
+    <div class="button_div">
+        <button class="button_admin button_logout" OnClick="window.location.href='?p=logIn'">Retour</button>
+    </div>
 </div>

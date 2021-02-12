@@ -20,6 +20,6 @@
             <a class="link isActive" href="?p=categories">Catégories</a>
             <a class="link isActive" href="?p=product">Produits</a>            
             <a class="link isActive" href="?p=logIn">Mon compte</a>
-            <li><a href=""><i class="fas fa-shopping-cart fa-2x"></i></a></li>
+            <li><a href="?p=cart"><i class="fas fa-shopping-cart fa-2x"></i></a></li>
         </ul>
     </nav>

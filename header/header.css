@@ -449,3 +449,7 @@ button {
 .product_update td .prix {
     text-align: center;
 }
+
+.product_update td .id_block {
+    pointer-events: none;
+}

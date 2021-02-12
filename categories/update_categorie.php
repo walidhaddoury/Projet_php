@@ -23,7 +23,7 @@ require_once("init.php");
             ?>
                 <form action="?p=handle_update_categorie" method="POST">
                     <tr>
-                        <td><input name="id" type="text" value="<?= $element['id'] ?>" /></td>
+                        <td><input class="id_block" name="id" type="text" value="<?= $element['id'] ?>" /></td>
                         <td><input name="intitule" type="text" value="<?= $element['intitule'] ?>" /></td>
                         <td><button type='submit'><i class="fas fa-check fa-2x update"></i></button></td>
                     </tr>
@@ -33,4 +33,8 @@ require_once("init.php");
 
         </tbody>
     </table>
+    
+    <div class="button_div">
+        <button class="button_admin button_logout" OnClick="window.location.href='?p=logIn'">Retour</button>
+    </div>
 </div>

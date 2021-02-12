@@ -15,7 +15,12 @@ $ProductManager->updateProduct([
     'description' => $_POST['description']
 ]);
 
-echo "<h3 class='text_homePage'>Votre produit a bien été modifié.</h3>";
+echo "  <div class='retour admin_body'>
+            <h3 class='text_homePage'>Votre produit a bien été modifié.</h3>
+            <div class='button_div'>
+                <button class='button_admin button_logout' OnClick=\"window.location.href='?p=logIn'\">Retour</button>
+            </div>
+        </div>";
 die();
 
 ?>

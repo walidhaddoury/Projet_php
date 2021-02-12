@@ -7,7 +7,7 @@
             <input name="intitule" class="intitule input" type="text" placeholder="Nom du produit">
         </div>
         <div class="place">
-            <input name="prix" class="prix input" type="number" placeholder="Prix">
+            <input name="prix" class="prix input" type="text" placeholder="Prix">
         </div>
         <div class="place">
             <input name="description" class="description input" type="text" placeholder="Description">
